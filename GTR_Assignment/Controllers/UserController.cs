@@ -93,5 +93,21 @@ namespace GTR_Assignment.Controllers
                 return BadRequest($"Error: {ex.Message}");
             }
         }
+
+        [HttpGet]
+        [Route("Login")]
+        public async Task<IActionResult> Login(string username, string password)
+        {
+            try
+            {
+                var user = await _unitofWork.Users.Login(username, password);
+                if (user == null) return NotFound();
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Error: {ex.Message}");
+            }
+        }
     }
 }

@@ -14,5 +14,6 @@ namespace GTR_Assignment.EF
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<ProductCart> ProductCarts { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZSJ0HeNaHEkPw90Jz4y+dVNMvLd+2V16tQ0mwkEtR1VfofYjxZUcKTowbH3dMis/OghIuERPIjWUxTjRaCPqWw==",
+  "dgSpecHash": "aF3YJm9ST2KuAOEdGTFO/+QcdJ4VZap9zFYG/DhBydvmCawjh+OX+0XN8SRMqJiYcl8FD3Ne0ErQvNyA56etoA==",
   "success": true,
   "projectFilePath": "A:\\GTR HR\\GTR_Assignment\\GTR_Assignment\\GTR_Assignment.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\mohit\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\mohit\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\mohit\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\mohit\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\mohit\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\mohit\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\mohit\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

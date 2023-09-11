@@ -76,3 +76,4 @@ A:\GTR HR\GTR_Assignment\GTR_Assignment\obj\Debug\net7.0\GTR_Assignment.genrunti
 A:\GTR HR\GTR_Assignment\GTR_Assignment\obj\Debug\net7.0\ref\GTR_Assignment.dll
 A:\GTR HR\GTR_Assignment\GTR_Assignment\bin\Debug\net7.0\AutoMapper.dll
 A:\GTR HR\GTR_Assignment\GTR_Assignment\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+A:\GTR HR\GTR_Assignment\GTR_Assignment\bin\Debug\net7.0\Newtonsoft.Json.dll

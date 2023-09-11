@@ -14,6 +14,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<GtrContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddHttpClient("HttpClient", client =>
+{
+    client.BaseAddress = new Uri("https://www.pqstec.com/InvoiceApps/values/GetProductListAll");
+});
 builder.Services.AddScoped<IUnitofWork, UnitOfWork>();
 
 var app = builder.Build();

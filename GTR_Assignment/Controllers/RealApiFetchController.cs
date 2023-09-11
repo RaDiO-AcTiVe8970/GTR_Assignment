@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GTR_Assignment.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GTR_Assignment.Controllers
@@ -7,11 +8,11 @@ namespace GTR_Assignment.Controllers
     [ApiController]
     public class RealApiFetchController : ControllerBase
     {
-        private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IUnitofWork _unitofWork;
 
-        public RealApiFetchController(IHttpClientFactory httpClientFactory)
+        public RealApiFetchController(IUnitofWork unitofWork)
         {
-            _httpClientFactory = httpClientFactory;
+            _unitofWork = unitofWork;
         }
 
         [HttpGet("GetProductListAll")]
@@ -19,26 +20,27 @@ namespace GTR_Assignment.Controllers
         {
             try
             {
-                var httpClient = _httpClientFactory.CreateClient();
-
-                var apiUrl = "https://www.pqstec.com/InvoiceApps/values/GetProductListAll";
-
-                var response = await httpClient.GetAsync(apiUrl);
-                if (response.IsSuccessStatusCode)
-                {
-                    var content = await response.Content.ReadAsStringAsync();
-
-                    return Ok(content);
-                }
-                else
-                {
-                    // If the request is not successful, return an error response
-                    return StatusCode((int)response.StatusCode, "External API request failed");
-                }
+                HttpClient http= new HttpClient();
+                var response = await http.GetAsync("https://www.pqstec.com/InvoiceApps/values/GetProductListAll");
+                var result = await response.Content.ReadAsStringAsync();
+                return Ok(result);
             }
             catch (Exception ex)
             {
-                // Handle exceptions and return an error response
+                return BadRequest($"Error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("GetProductListAllJSON")]
+        public async Task<IActionResult> GetProductListAllJSON()
+        {
+            try
+            {
+                var res= await _unitofWork.Products.All();
+                return Ok(res);
+            }
+            catch (Exception ex)
+            {
                 return BadRequest($"Error: {ex.Message}");
             }
         }
